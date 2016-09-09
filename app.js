@@ -7,12 +7,9 @@ var svgElement = document.querySelector('#my-svg');
 var closeFingerPrintElement = document.querySelector('.close');
 
 blockBtnElement.addEventListener('click', function () {
-  if (permissionElement.classList.contains('hide')) {
-    permissionElement.classList.remove('hide');
-  }
-  else {
-    permissionElement.classList.add('hide');
-  }
+  permissionElement.classList.add('hide');
+  permissionAPIElement.classList.remove('hide');
+  fingerPrintElement.classList.add('hide');
 });
 
 closeFingerPrintElement.addEventListener('click', function () {

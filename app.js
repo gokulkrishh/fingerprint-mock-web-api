@@ -20,14 +20,14 @@ closeFingerPrintElement.addEventListener('click', function () {
 
 allowBtnElement.addEventListener('click', function () {
   permissionElement.classList.add('hide');
+  fingerPrintElement.classList.remove('hide');
+  animateSvg();
   svgElement.children[0].setAttribute('stroke', '#fff');
 })
 
 permissionAPIElement.addEventListener('click', function () {
   permissionAPIElement.classList.add('hide');
   permissionElement.classList.remove('hide');
-  fingerPrintElement.classList.remove('hide');
-  animateSvg();
 });
 
 svgElement.addEventListener('mouseover', function () {

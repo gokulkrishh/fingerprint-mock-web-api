@@ -22,12 +22,8 @@ closeFingerPrintElement.addEventListener('click', function () {
 });
 
 allowBtnElement.addEventListener('click', function () {
-  if (permissionElement.classList.contains('hide')) {
-    permissionElement.classList.remove('hide');
-  }
-  else {
-    permissionElement.classList.add('hide');
-  }
+  permissionElement.classList.add('hide');
+  svgElement.children[0].setAttribute('stroke', '#fff');
 })
 
 permissionAPIElement.addEventListener('click', function () {
@@ -44,9 +40,6 @@ svgElement.addEventListener('mouseover', function () {
 function animateSvg() {
   new Vivus('my-svg', {
     duration: 30,
-    type: 'async',
-    onReady: function(myVivus) {
-      myVivus.el.setAttribute('stroke', '#ffffff');
-    }
+    type: 'async'
   });
 }

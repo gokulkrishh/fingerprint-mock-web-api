@@ -1,0 +1,145 @@
+body {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 30px auto;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+}
+
+.device-frame {
+  width: 300px;
+  height: 583px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.device-content {
+  height: 517px;
+}
+
+.device-content > img {
+  width: 280px;
+  height: auto;
+}
+
+.fingerprint {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #607D8B;
+  color: #fff;
+  border-radius: 50%;
+  bottom: 180px;
+  left: 0;
+  right: 0;
+  top: 120px;
+  margin: auto;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: opacity 0.33s linear;
+}
+
+svg:hover .empty {
+  stroke: #ffffff;
+}
+
+p {
+  margin: 0;
+}
+
+.permission {
+  background: #ffffff;
+  height: 100px;
+  width: 257px;
+  color: #000;
+  position: absolute;
+  bottom: 67px;
+  left: -2px;
+  right: 0;
+  margin: auto;
+  box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+}
+
+.permission img {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.permission > svg {
+  position: initial;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.close {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.close:active {
+  background: #ccc;
+}
+
+.actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.permission > p {
+  margin-top: 10px;
+  width: 200px;
+  text-align: left;
+  padding-left: 8px;
+  word-break: break-all;
+  font-size: 13px;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  color: #1E88E5;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 5px;
+  outline: 0;
+  width: 60px;
+  height: 25px;
+}
+
+button:active {
+  background: #ccc;
+}
+
+button:last-child {
+  width: 60px;
+  height: 25px;
+  background: #1E88E5;
+  color: #fff;
+  border-radius: 2px;
+}

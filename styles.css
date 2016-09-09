@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+.device {
+  position: relative;
+}
+
 .container {
   margin: 30px auto;
   text-align: center;
@@ -14,7 +18,8 @@ body {
   height: 500px;
 }
 
-.device-frame {
+.device-frame,
+.device-frame img {
   width: 300px;
   height: 583px;
   position: relative;
@@ -23,6 +28,13 @@ body {
 
 .device-content {
   height: 517px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 69px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .device-content > img {
@@ -40,7 +52,7 @@ body {
   bottom: 180px;
   left: 0;
   right: 0;
-  top: 120px;
+  top: 180px;
   margin: auto;
 }
 
@@ -66,10 +78,10 @@ p {
 .permission {
   background: #ffffff;
   height: 100px;
-  width: 257px;
+  width: 275px;
   color: #000;
   position: absolute;
-  bottom: 67px;
+  bottom: 0px;
   left: -2px;
   right: 0;
   margin: auto;
@@ -77,6 +89,13 @@ p {
   display: flex;
   align-items: flex-start;
   user-select: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.permission.hide {
+  bottom: -106px;
 }
 
 .permission img {
@@ -142,4 +161,48 @@ button:last-child {
   background: #1E88E5;
   color: #fff;
   border-radius: 2px;
+}
+
+button:last-child:active {
+  opacity: 0.9;
+}
+
+.fingerprint.hide {
+  display: none;
+}
+
+.get-permission {
+  width: 170px;
+  background: #1E88E5;
+  color: #fff;
+  height: 35px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.get-permission:active {
+  background: #1E88E5;
+  box-shadow: none;
+}
+
+.get-permission.hide {
+  display: none;
+}
+
+.fingerprint p {
+  width: 270px;
+  color: #000;
+  position: relative;
+  left: -92px;
+  right: 0;
+  bottom: 0;
+  top: 90px;
+  margin: auto;
+  height: 50px;
 }
